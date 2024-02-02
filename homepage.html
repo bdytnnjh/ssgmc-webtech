@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+    <div class="nav-container">
+        <!--navigation bar-->
+        <nav>
+          <div class="logo">
+            <img src="logo ssgmc.jpg" alt="club logo">
+          </div>
+          <div class="nav-item">
+            <a href="dummy.html">Home</a>
+          </div>
+          <div class="nav-item">
+            <a href="about.html">About</a>
+            <div class="sub-nav">
+              <a href="about.html#background">Background</a>
+              <a href="about.html#vision">Vision and Mission</a>
+              <a href="about.html#objectives">Objectives</a>
+              <a href="about.html#testimonials">Testimonials</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="activity.html">Activity</a>
+          </div>
+          <div class="nav-item">
+            <a href="achievement.html">Achievement</a>
+          </div>
+          <div class="nav-item">
+            <a href="chart.html">Chart</a>
+          </div>
+        </nav>
+        <div class="burger-icon">&#9776;</div>
+
+      </div>
+
+    <!--homepage content-->
+    <header>
+      <h1>WELCOME TO PERSATUAN SENI SILAT GAYONG MALAYSIA (PSSGM), IIUM</h1>
+    </header>
+
+  <section class="section-content">
+    <div class="section-header">
+        <div class="pssgm">
+        </div>
+        <p>
+            Persatuan Seni Silat Gayong Malaysia (PSSGM) was 
+            one of the co-curriculum activities for IIUM students.
+            This club has been established since 1995. This association 
+            is under the umbrella of the National Malaysian Gayong Silat 
+            Association established by Dato' Meor Abdul Rahman bin Uda Mohd Hashim.
+            
+            Silat Seni Gayong has various learning breakdowns such as movement basics, 
+            avoidance basics, jump basics and deadly attacks. Silat Seni Gayong offers 
+            self-defense knowledge that also teaches its practitioners leadership, discipline and courage.
+        </p>
+        <img src="agm1.jpg" alt="club member">
+    </div>
+</section>
+
+<!--slideshow-->
+<section class="slideshow-title">
+    <h1>SLIDESHOW</h1>
+</section>
+
+<section class="slideshow-container">
+    <div class="mySlides">
+        <img src="smg.jpg" alt="pic 1">
+    </div>
+
+    <div class="mySlides">
+        <img src="booth.jpg" alt="pic 2">
+    </div>
+
+    <div class="mySlides">
+        <img src="ukb.jpg" alt="pic 3">
+    </div>
+
+    <!-- Navigation dots -->
+    <div style="text-align: center; margin-top: 20px;">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+
+<!--javascript code to create slideshow effect-->
+<script>
+    let slideIndex = 0;
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slideIndex++;
+
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+
+    setTimeout(showSlides, 3000); // Change slide every 3 seconds (adjust as needed)
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+// Initial call to start the slideshow
+showSlides();
+</script>
+
+<!--footer-->
+<footer>
+    <p>Find us on: </p>
+    <div class="social-media">
+      <a href="https://www.facebook.com/silatsenigayonguiam?locale=ms_MY" target="_blank"><img src="fb logo.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/iiumssgmcgombak/" target="_blank"><img src="ig logo.png" alt="Instagram"></a>
+    </div>
+    <div class="watermark">Done by: Bidayatun Najihah (2216798)</div>
+</footer>
+
+</body>
+</html>
+
