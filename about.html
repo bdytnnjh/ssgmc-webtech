@@ -8,38 +8,51 @@
 </head>
 <body>
 
-    <nav>
-        <div class="logo">
-          <img src="logo ssgmc.jpg" alt="club logo">
-      </div>
-          <div class="nav-item">
-              <a href="dummy.html">Home</a>
-          </div>
-          <div class="nav-item">
-              <a href="about.html">About</a>
-              <div class="sub-nav">
-                  <a href="about.html#background">Background</a>
-                  <a href="about.html#vision">Vision and Mission</a>
-                  <a href="about.html#objectives">Objectives</a>
-                  <a href="about.html#testimonials">Testimonials</a>
-              </div>
-          </div>
-          <div class="nav-item">
-              <a href="activity.html">Activity</a>
-          </div>
-          <div class="nav-item">
-              <a href="achievement.html">Achievement</a>
-          </div>
-          <div class="nav-item">
-              <a href="chart.html">Chart</a>
-          </div>
-      </nav>
+    <!--navigation bar-->
+  <nav>
+    <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="homepage.html">Home</a></li>
+        <li class="nav-with-subnav">
+          <a href="about.html">About</a> 
+            <div class="sub-nav">
+              <a href="about.html#background">Background</a>
+              <a href="about.html#vision">Vision and Mission</a>
+              <a href="about.html#objectives">Objectives</a>
+              <a href="about.html#testimonials">Testimonials</a>
+            </div></li>
+        <li><a href="activity.html">Activity</a></li> 
+        <li><a href="achievement.html">Achievement</a></li> 
+        <li><a href="chart.html">Chart</a></li> 
+        
+    </ul>
 
+    <ul>
+        <li><img src="logo ssgmc.jpg" alt="club logo"></li>
+        <li class="hideOnMobile"><a href="homepage.html">Home</a></li>
+        <li class="nav-with-subnav" >
+          <a href="about.html">About</a> 
+            <div class="sub-nav">
+              <a href="about.html#background">Background</a>
+              <a href="about.html#vision">Vision and Mission</a>
+              <a href="about.html#objectives">Objectives</a>
+              <a href="about.html#testimonials">Testimonials</a>
+            </div></li>
+        <li class="hideOnMobile"><a href="activity.html">Activity</a></li> 
+        <li class="hideOnMobile"><a href="achievement.html">Achievement</a></li> 
+        <li class="hideOnMobile"><a href="chart.html">Chart</a></li> 
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+  </nav>
+
+      <!--page header-->
     <header>
         <h1>ABOUT OUR CLUB</h1>
     </header>
 
+    <!--the content of the page-->
     <div class="page-content">
+        <!--background section-->
         <div class="background" id="background">
             <p>
                 Silat Seni Gayong was established by the late Dato Meor Abdul Rahman bin Daeng Uda Mohd Hashim DPCM. 
@@ -68,6 +81,7 @@
             <img src="logo gayong kebangsaan.jpg" alt="logo ssgm kebangsaan">
         </div>
 
+        <!--vision, mission and objectives section-->
         <div class="content-box" id="vision">
             <h2>Vision</h2>
             <p>
@@ -95,10 +109,12 @@
             </ul>
         </div>
 
+        <!--testimonial section-->
         <div class="testimonials" id="testimonials">
-            <h2>Testimonials</h2>
+            <h1>Testimonials</h1>
         </div>
 
+        <!--circle to hold the image -->
         <div class="circles">
             <div class="circle">
                 <img src="pp1.jpg" alt="Person 1">
@@ -114,6 +130,7 @@
             </div>
         </div>
 
+        <!--members name and age-->
         <div class="names">
             <p>Aisyah, 21</p>
             <p>Arif, 19</p>
@@ -121,6 +138,7 @@
             <p>Akmal, 24</p>
         </div>
 
+        <!--members comment about the club-->
         <div class="words">
             <p>"This clubs teach me how to defend myself when I'm alone."</p>
             <p>"Good exposure to university students"</p>
@@ -129,6 +147,7 @@
         </div>
     </div>
 
+    <!--footer-->
     <footer>
         <p>Find us on: </p>
         <div class="social-media">
@@ -137,6 +156,19 @@
         </div>
         <div class="watermark">Done by: Bidayatun Najihah (2216798)</div>
     </footer>
+
+    <!--Js for navbar responsive-->
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+      
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+      </script>
     
 </body>
 </html>
